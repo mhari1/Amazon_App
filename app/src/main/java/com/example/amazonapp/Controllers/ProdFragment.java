@@ -34,7 +34,7 @@ import java.util.List;
 public class ProdFragment extends Fragment {
     /*
     Product Fragement on click of category or on the click of search button this whill be redirected to this page
-    created by krishna panchal
+
 
     */
 

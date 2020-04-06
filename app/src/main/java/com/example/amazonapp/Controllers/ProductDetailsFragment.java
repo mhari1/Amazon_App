@@ -107,7 +107,14 @@ public class ProductDetailsFragment extends Fragment {
                        FireBaseHelper fireBaseHelper=new FireBaseHelper();
 
                        fireBaseHelper.InsertCart(customer_id,prodId,String.valueOf(qty),prodDesc.getText().toString(),itemPrice.getText().toString(),imgURL);
-                        Toast.makeText(getContext(),"Added to cart successfully ...!",Toast.LENGTH_SHORT).show();
+                       AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                       builder.setTitle("Added ");
+                       builder.setMessage("Data Added to Cart..!");
+                       // add a button
+                       builder.setPositiveButton("OK", null);
+                       // create and show the alert dialog
+                       AlertDialog dialog = builder.create();
+                       dialog.show();
                       /* ArrayList<CartFireBase> cartFireBases=fireBaseHelper.ViewCart(customer_id);*/
                    }
 
@@ -129,7 +136,7 @@ public class ProductDetailsFragment extends Fragment {
                 ArrayList<ProductDetail> productDetails=model.getData();
 
                 if (model.getSuccess().equals("1")) {
-                    Toast.makeText(view.getContext(), "" + response, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(view.getContext(), "" + response, Toast.LENGTH_SHORT).show();
                     prodId=productDetails.get(0).getProductId();
                     imgURL=productDetails.get(0).getImage();
                     Picasso.with(context).load(productDetails.get(0).getImage()).resize(150, 150).centerCrop().into(prodImage);

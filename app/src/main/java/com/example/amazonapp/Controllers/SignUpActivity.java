@@ -53,6 +53,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * There is a error with comapny and province spinner we have to selected company again if its giving
+ * error "provincre id undefined" 
+ */
 public class SignUpActivity extends AppCompatActivity implements Spinner.OnItemSelectedListener {
 
     // variables

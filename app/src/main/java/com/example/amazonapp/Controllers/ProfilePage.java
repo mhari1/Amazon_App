@@ -153,9 +153,6 @@ public class ProfilePage extends Fragment implements Spinner.OnItemSelectedListe
                     Log.d("response", response);
                     ProfileResponseModel model = new Gson().fromJson(response, ProfileResponseModel.class);
                     ArrayList<ProfilePageModel> profilePageModels = model.getData();
-                    // HashMap<Integer, String> P_Hash=new HashMap<Integer, String>();
-
-                    // ArrayList<ProfilePageModel> posts=response.getClass();
 
                     if (model.getSuccess().equals("1")) {
                         // Toast.makeText(getContext(), "" + response, Toast.LENGTH_SHORT).show();
@@ -202,7 +199,7 @@ public class ProfilePage extends Fragment implements Spinner.OnItemSelectedListe
                 ArrayList<ProvinceModel> provinceModels = model.getData();
 
                 if (model.getSuccess().equals("1")) {
-                    Toast.makeText(getContext(), "" + response, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), "" + response, Toast.LENGTH_SHORT).show();
 
                     /*  ArrayList<String> categoryName=new ArrayList<>();*/
 

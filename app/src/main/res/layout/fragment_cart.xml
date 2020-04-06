@@ -87,7 +87,7 @@
                         android:id="@+id/total_items"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" $5"
+                        android:text=" $"
                         android:textColor="@android:color/background_dark"
                         android:textSize="23dp"
                         android:textStyle="bold" />
@@ -103,11 +103,12 @@
                         android:textColor="@android:color/background_dark"
                         android:textSize="20dp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/total_shipping_charges"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" $33"
+                        android:text=" $"
                         android:textColor="@android:color/background_dark"
                         android:textSize="23dp"
                         android:textStyle="bold" />
@@ -126,9 +127,9 @@
                     android:id="@+id/total_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" $399599"
-                    android:textSize="23dp"
+                    android:text=" $"
                     android:textColor="@android:color/background_dark"
+                    android:textSize="23dp"
                     android:textStyle="bold" />
 
 

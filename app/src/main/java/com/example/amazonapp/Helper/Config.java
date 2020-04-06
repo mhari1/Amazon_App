@@ -6,7 +6,9 @@ package com.example.amazonapp.Helper;
 
 public class Config {
 
-
+/*
+* URL Links for all api
+ */
 
   public static final String GET_CATEGORIES="  http://18.216.15.198:3000/api/category/getcategories";
   public static final String LOGIN_USER="  http://18.216.15.198:3000/api/customeruser/authcustomeruser";

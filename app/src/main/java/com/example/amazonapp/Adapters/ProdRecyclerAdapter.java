@@ -23,7 +23,9 @@ import java.util.List;
 public class ProdRecyclerAdapter  extends RecyclerView.Adapter<ProdRecyclerAdapter.MyViewHolders> {
 
 
-
+/*
+*Products Adapter
+ */
     List<String> prodTitle;
     List<String> prodImgUrl;
     List<String> prodId;
@@ -80,7 +82,7 @@ public class ProdRecyclerAdapter  extends RecyclerView.Adapter<ProdRecyclerAdapt
                 @Override
                 public void onClick(View v) {
 
-                    Toast.makeText(v.getContext(), "Clicked -> " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(v.getContext(), "Clicked -> " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                     //calling
                     AppCompatActivity activity = (AppCompatActivity) v.getContext();
                     ProductDetailsFragment productFragment = new ProductDetailsFragment(v.getContext(),prodId.get(getAdapterPosition()));

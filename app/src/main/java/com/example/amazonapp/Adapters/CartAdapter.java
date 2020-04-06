@@ -118,7 +118,7 @@ public class CartAdapter extends RecyclerView.Adapter {
             btnRemove.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(v.getContext(),hiddenSnapId.getText().toString(),Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(v.getContext(),hiddenSnapId.getText().toString(),Toast.LENGTH_SHORT).show();
                     Log.v("Show id",hiddenSnapId.getText().toString());
                     FireBaseHelper helper=new FireBaseHelper();
                     helper.removeItem(hiddenSnapId.getText().toString());
@@ -135,11 +135,7 @@ public class CartAdapter extends RecyclerView.Adapter {
                      */
                 }
             });
-           /* productQuantity.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                }
-            });*/
+
             productQuantity.setOnValueChangeListener(new ElegantNumberButton.OnValueChangeListener(){
 
                 @Override

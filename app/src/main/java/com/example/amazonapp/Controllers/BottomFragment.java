@@ -30,7 +30,9 @@ import com.google.android.material.navigation.NavigationView;
 public class BottomFragment extends BottomSheetDialogFragment {
     NavigationView navigationView;
 
-
+/*
+* Navigation menu for registered user
+ */
     public BottomFragment() {
         // Required empty public constructor
     }
@@ -58,14 +60,14 @@ public class BottomFragment extends BottomSheetDialogFragment {
                        // Toast.makeText(getActivity(), "Login", Toast.LENGTH_SHORT).show();
                         //break;
                     case R.id.contact_us:
-                        Toast.makeText(getActivity(), "Contact US", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getActivity(), "Contact US", Toast.LENGTH_SHORT).show();
                         ContactFragment contactFragment =new ContactFragment(getContext());
                         FragmentManager fragmentManagerContact=getFragmentManager();
                         fragmentManagerContact.beginTransaction().replace(R.id.main_layout,contactFragment,contactFragment.getTag()).commit();
                         navigationView.setVisibility(View.GONE);
                         break;
                     case R.id.logout:
-                        Toast.makeText(getActivity(), "Log out ", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getActivity(), "Log out ", Toast.LENGTH_SHORT).show();
                         AlertDialog.Builder AlertLogout=new AlertDialog.Builder(getActivity());
                         AlertLogout.setMessage("Do you want to Signout ?").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override

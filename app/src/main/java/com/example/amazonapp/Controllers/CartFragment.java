@@ -75,7 +75,10 @@ public class CartFragment extends Fragment {
     public CartFragment() {
         // Required empty public constructor
     }
-
+/*
+* Binded Cart data from the firebase database
+* To show all cart data it will call Cart Adapter
+ */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -182,7 +185,7 @@ public class CartFragment extends Fragment {
     }
     public  void callCartAdapter(ArrayList<CartFireBase>  _adapterCart,RecyclerView _recyclerView_cart,TextView _totalItemsn,TextView _totalShippingCharges,TextView _totalItemsAmount){
 
-
+//Call back method for displaying cart again
         ArrayList<CartModel> cartModel=new ArrayList<>();
         int count=0;
         responseCartFireBase=_adapterCart;
@@ -191,35 +194,51 @@ public class CartFragment extends Fragment {
         int totalItem=0;
         String shippingCharges="10";
         PurchaseCartModel purchaseCartModel=new PurchaseCartModel();
-        for(CartFireBase cm:_adapterCart){
-            c = new CartModel();
-            c.setProductQuantity(cm.getProductQuantity());
-            c.setProductPrice(cm.getProductPrice());
-            c.setProductImage(cm.getProductImage());
-            c.setProduct_name(cm.getProduct_name());
-            c.setSnapId(cm.getSnapId());
-            totalPrice+=Integer.parseInt(cm.getProductPrice());
-            totalItem+=Integer.parseInt(cm.getProductQuantity());
-            cartModel.add(c);
-            c.setType(0);
+        if(responseCartFireBase.size()==0){
+           /* AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+            builder.setTitle("No Products ");
+            builder.setMessage("No Products Found in cart");
+            // add a button
+            builder.setPositiveButton("OK", null);
+            // create and show the alert dialog
+            AlertDialog dialog = builder.create();
+            dialog.show();*/
+           /* Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);*/
         }
-
-        purchaseCartModel.setShippingCharges(shippingCharges);
-        purchaseCartModel.setTotalItem(Integer.toString(totalItem));
-        purchaseCartModel.setTotalPrice(Double.toString(totalPrice));
+        else {
 
 
-        String totalItemText = purchaseCartModel.getTotalItem();
-        String totalShippingChargesText = purchaseCartModel.getShippingCharges();
-        String totalAmountText = purchaseCartModel.getTotalPrice();
+            for (CartFireBase cm : _adapterCart) {
+                c = new CartModel();
+                c.setProductQuantity(cm.getProductQuantity());
+                c.setProductPrice(cm.getProductPrice());
+                c.setProductImage(cm.getProductImage());
+                c.setProduct_name(cm.getProduct_name());
+                c.setSnapId(cm.getSnapId());
+                totalPrice += Double.parseDouble(cm.getProductPrice());
+                totalItem += Integer.parseInt(cm.getProductQuantity());
+                cartModel.add(c);
+                c.setType(0);
+            }
 
-        _totalItemsn.setText(totalItemText);
-        _totalShippingCharges.setText(totalShippingChargesText);
-        _totalItemsAmount.setText(totalAmountText);
-        CartAdapter cartAdapter = new CartAdapter(cartModel, getContext());
-           _recyclerView_cart.setAdapter(cartAdapter);
-           cartAdapter.notifyDataSetChanged();
-           _recyclerView_cart.setLayoutManager(new LinearLayoutManager(getContext()));
+            purchaseCartModel.setShippingCharges(shippingCharges);
+            purchaseCartModel.setTotalItem(Integer.toString(totalItem));
+            purchaseCartModel.setTotalPrice(Double.toString(totalPrice));
 
+
+            String totalItemText = purchaseCartModel.getTotalItem();
+            String totalShippingChargesText = purchaseCartModel.getShippingCharges();
+            String totalAmountText = purchaseCartModel.getTotalPrice();
+
+            _totalItemsn.setText(totalItemText);
+            _totalShippingCharges.setText(totalShippingChargesText);
+            _totalItemsAmount.setText(totalAmountText);
+            CartAdapter cartAdapter = new CartAdapter(cartModel, getContext());
+            _recyclerView_cart.setAdapter(cartAdapter);
+            cartAdapter.notifyDataSetChanged();
+            _recyclerView_cart.setLayoutManager(new LinearLayoutManager(getContext()));
+        }
     }
+
 }

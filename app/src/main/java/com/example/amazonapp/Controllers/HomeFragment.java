@@ -35,6 +35,10 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
+
+/**
+ *
+ */
 public class HomeFragment extends Fragment {
     RecyclerView categoryList, productList;
     List<String> titles;
@@ -68,13 +72,7 @@ public class HomeFragment extends Fragment {
 
                 if (model.getSuccess().equals("1") ) {
 
-                    Toast.makeText(context, "" + response, Toast.LENGTH_SHORT).show();
-
-                   // Toast.makeText(context, "" + response, Toast.LENGTH_SHORT).show();
-
-
-
-
+                    //Toast.makeText(context, "" + response, Toast.LENGTH_SHORT).show();
                     for(PopularProductModel pm:popularProductModels)
                     {
                         productName.add(pm.getProductname());
@@ -112,7 +110,7 @@ public class HomeFragment extends Fragment {
 
                 if (model.getSuccess().equals("1") ) {
 
-                    Toast.makeText(getContext(), "" + response, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), "" + response, Toast.LENGTH_SHORT).show();
 
                     //Toast.makeText(getContext(), "" + response, Toast.LENGTH_SHORT).show();
 

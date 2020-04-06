@@ -28,7 +28,9 @@ import com.squareup.picasso.Picasso;
 import java.util.Locale;
 
 public class ContactFragment extends Fragment {
-
+/*
+*Contact Us page binded with getCompaydetails by comapny id API
+ */
     Context context;
 
     TextView placename, companywebsite,placeAddress1,placeAddress2,city,postalcode;
@@ -97,15 +99,6 @@ public class ContactFragment extends Fragment {
                 intent.setPackage("com.google.android.apps.maps");
                 startActivity(intent);
 
-                // Creates an Intent that will load a map of San Francisco
-                //Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4194");
-                //Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                //mapIntent.setPackage("com.google.android.apps.maps");
-                //startActivity(mapIntent);
-
-                //String uri = String.format(Locale.ENGLISH, "http://maps.google.com/maps?q=loc:%f,%f", maplat,maplang);
-                //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                //startActivity(intent);
             }
         });
         return view;

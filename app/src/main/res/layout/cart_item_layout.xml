@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:orientation="vertical"
-android:background="#d9d9d9"
-android:elevation="3dp"
-android:layout_width="match_parent"
-android:layout_height="wrap_content">
-
-<ImageView
-    android:id="@+id/product_image"
-    android:layout_width="100dp"
-    android:layout_height="100dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginTop="16dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-     />
-
-<TextView
-    android:id="@+id/product_title"
-    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
-    android:layout_marginTop="16dp"
-    android:text="Skirt"
-    android:textColor="@android:color/background_dark"
-    android:textSize="25dp"
-    app:layout_constraintStart_toEndOf="@+id/product_image"
-    app:layout_constraintTop_toTopOf="parent" />
+    android:background="#d9d9d9"
+    android:elevation="3dp"
+    android:orientation="vertical">
 
-<TextView
-    android:id="@+id/snapShotId"
-    android:layout_width="89dp"
-    android:layout_height="21dp"
-    android:visibility="invisible"
-    app:layout_constraintBottom_toBottomOf="@+id/product_title"
-    app:layout_constraintEnd_toEndOf="@+id/product_price"
-    app:layout_constraintStart_toEndOf="@+id/product_image"
-    app:layout_constraintTop_toTopOf="parent">
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</TextView>
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Skirt"
+        android:textColor="@android:color/background_dark"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/product_image"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<TextView
-    android:id="@+id/product_price"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="16dp"
-    android:text="$49999"
-    android:textColor="@android:color/background_dark"
-    android:textSize="35dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/product_title"/>
+    <TextView
+        android:id="@+id/snapShotId"
+        android:layout_width="89dp"
+        android:layout_height="21dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/product_title"
+        app:layout_constraintEnd_toEndOf="@+id/product_price"
+        app:layout_constraintStart_toEndOf="@+id/product_image"
+        app:layout_constraintTop_toTopOf="parent">
 
-<!--<TextView
+    </TextView>
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="$49999"
+        android:textColor="@android:color/background_dark"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_title" />
+
+    <!--<TextView
     android:id="@+id/product_quantity"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -69,44 +68,45 @@ android:layout_height="wrap_content">
     app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toEndOf="@+id/product_image"
     app:layout_constraintTop_toBottomOf="@+id/product_title" />-->
-<com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-    android:layout_width="66dp"
-    android:layout_height="34dp"
-    android:id="@+id/product_quantity"
-    android:layout_marginStart="16dp"
-    android:layout_marginTop="20dp"
-    android:backgroundTint="#000000"
-    android:drawableEnd="@drawable/arrow_drop_down"
-    android:drawablePadding="8dp"
-    android:padding="3dp"
-    android:text="Qty: 1"
-    android:textColor="@android:color/background_dark"
-    app:layout_constraintEnd_toStartOf="@+id/product_price"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toEndOf="@+id/product_image"
-    app:layout_constraintTop_toBottomOf="@+id/product_title"></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
-<LinearLayout
-    android:id="@+id/remove_item"
-    android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:orientation="horizontal"
-    android:background="#bfbfbf"
-    android:gravity="center"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/product_image">
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/product_quantity"
+        android:layout_width="107dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#000000"
+        android:drawableEnd="@drawable/arrow_drop_down"
+        android:drawablePadding="8dp"
+        android:padding="3dp"
+        android:text="Qty: 1"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintEnd_toStartOf="@+id/product_price"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/product_image"
+        app:layout_constraintTop_toBottomOf="@+id/product_title"></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
 
-    <Button
-        android:id="@+id/btnCartRemove"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:clickable="true"
-        android:drawableStart="@drawable/delete_item"
-        android:drawablePadding="4dp"
+    <LinearLayout
+        android:id="@+id/remove_item"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#bfbfbf"
         android:gravity="center"
-        android:text="Remove item"
-        android:textColor="@android:color/background_dark" />
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_image">
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btnCartRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:drawableStart="@drawable/delete_item"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="Remove item"
+            android:textColor="@android:color/background_dark" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

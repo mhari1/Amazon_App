@@ -33,7 +33,9 @@ public class GuestUserNav extends BottomSheetDialogFragment {
     public GuestUserNav() {
         // Required empty public constructor
     }
-
+/*
+* Bottom navigation for Guest User
+ */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

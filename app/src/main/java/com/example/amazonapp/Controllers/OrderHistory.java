@@ -1,7 +1,9 @@
 package com.example.amazonapp.Controllers;
 
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -71,6 +73,18 @@ public class OrderHistory extends Fragment {
                 ArrayList<OrderHistoryModel> orders =model.getData();
 
                 if (model.getSuccess().equals("1")) {
+                    if(orders.size()==0){
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                        builder.setTitle("No Orders");
+                        builder.setMessage("No Orders till date Found");
+                        // add a button
+                        builder.setPositiveButton("OK", null);
+                        // create and show the alert dialog
+                        AlertDialog dialog = builder.create();
+                        dialog.show();
+                        Intent intent = new Intent(getActivity(), MainActivity.class);
+                        startActivity(intent);
+                    }
                     ArrayList<String> imgUrl=new ArrayList<>();
                     ArrayList<String> qty=new ArrayList<>();
                     ArrayList<String> title=new ArrayList<>();

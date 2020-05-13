@@ -2,7 +2,7 @@
 TrageGo Inventory Management App is made by Android Studio, FireBase and REST API's System basically provides the daily needs products and other household products which user can see and purchase it.
 
 # Installation
-Use Android Studio and Clone the project from https://github.com/krishna97p/AmazonApp.git then Install the Amazon-app. 
+Use Android Studio and Clone the project from https://github.com/mhari1/Amazon_App.git then Install the Amazon-app. 
 
 # Usage
 implementation 'com.android.support:design:28.0.0'
